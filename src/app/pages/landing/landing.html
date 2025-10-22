@@ -1,0 +1,28 @@
+<div class="relative w-screen h-screen overflow-hidden">
+  <!-- Background Video -->
+  <!-- <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
+    <source src="assets/landing-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  -->
+
+  <!-- Temporary Image -->
+  <div
+    class="absolute top-0 left-0 w-full h-full bg-center bg-cover"
+    style="background-image: url('assets/images/landing-hero.webp');">
+  </div>
+
+  <!-- Centered Logo -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+    <img src="assets/logo.svg" alt="MARU" class="w-40 sm:w-60 md:w-80"/>
+<!--    <h1 class="text-6xl font-[Newsreader] text-white mb-8">-->
+<!--      MARU-->
+<!--    </h1>-->
+    <button
+      (click)="enterSite()"
+      class="bg-white text-black font-bold py-3 px-8 rounded-md hover:bg-gray-200 transition">
+      Enter
+    </button>
+  </div>
+
+</div>

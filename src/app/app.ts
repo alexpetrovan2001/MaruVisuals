@@ -1,12 +1,23 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
+import {NavBarComponent} from './components/navbar/navbar';
+import {filter} from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavBarComponent],
   templateUrl: './app.html',
+  standalone: true,
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('maru-visuals');
+  showNavbar = false;
+
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        this.showNavbar = event.url !== "/" // hide navbar on landing page
+      });
+  }
 }
