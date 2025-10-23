@@ -1,1 +1,12 @@
-<p>home works</p>
+<h2 class="text-3xl md:text-4xl text-white mt-16 text-center">
+  Through the Lens
+</h2>
+
+<div class="grid gap-16 p-16 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+  @for (client of clients; track client){
+      <app-client-card
+        [client]="client"
+        (viewMore)="navigateToClientPage(client)"
+      ></app-client-card>
+  }
+</div>

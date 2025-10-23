@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {NavBarComponent} from './components/navbar/navbar';
 import {filter} from 'rxjs';
+import {Footer} from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBarComponent],
+  imports: [RouterOutlet, NavBarComponent, Footer],
   templateUrl: './app.html',
   standalone: true,
   styleUrl: './app.scss'

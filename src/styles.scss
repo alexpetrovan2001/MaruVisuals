@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,4 +7,12 @@
 body {
   background-color: #6D4C41;
   margin: 0;
+  @apply font-[Newsreader];
+  @apply text-[white]
+}
+
+@layer components {
+  .btn {
+    @apply text-white font-bold py-3 px-8 rounded-md bg-[#D7CCC8] hover:bg-[#B8AFAA] transition-colors duration-300;
+  }
 }

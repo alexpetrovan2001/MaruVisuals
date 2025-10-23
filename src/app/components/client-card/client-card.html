@@ -1,0 +1,12 @@
+<div class="relative w-full h-64 group cursor-pointer overflow-hidden rounded-lg shadow-lg">
+  <!-- Background Image -->
+  <img [src]="client.sampleImage" alt="{{client.name}} image" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+
+  <!-- Overlay (hidden by default, shows on hover) -->
+  <div class="absolute inset-0 bg-white bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+    <button class="px-4 py-2 bg-[#6D4C41] text-white rounded hover:bg-[#A88A81] transition z-10" (click)="onViewMore()">View More</button>
+  </div>
+
+  <!-- Center Logo -->
+  <img [src]="client.logo" alt="{{client.name}} logo" class="absolute inset-0 m-auto w-24 h-24 object-contain transition-all duration-500 group-hover:opacity-0">
+</div>
