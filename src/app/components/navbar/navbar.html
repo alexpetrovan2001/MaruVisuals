@@ -1,11 +1,25 @@
-<!--<nav class="bg-[#B8AFAA] rounded-md z-50 flex items-center justify-between px-6 py-4 mt-4 ml-4 mr-4">-->
 <nav class="z-50 flex items-center justify-between px-6 py-4">
 
   <!-- Logo -->
   <div class="absolute left-1/2 transform -translate-x-1/2">
-    <img src="assets/logo.svg" alt="MARU Logo" class="h-8 md:h-10 w-auto" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 300 80"
+      class="h-8 md:h-10 w-auto text-text"
+    >
+      <text
+        x="50%"
+        y="50%"
+        font-family="Grift, serif"
+        font-size="64"
+        fill="currentColor"
+        text-anchor="middle"
+        dominant-baseline="middle"
+      >
+        MARU
+      </text>
+    </svg>
   </div>
-
   <!-- Desktop Links -->
   <ul class="hidden lg:flex space-x-10 text-lg ml-auto">
     <li>
@@ -24,7 +38,7 @@
 
   <!-- Mobile Menu Button -->
   <button
-    class="lg:hidden text-white text-3xl"
+    class="lg:hidden text-text text-3xl"
     (click)="toggleMenu()"
   >
     ☰
@@ -40,13 +54,14 @@
 
   <!-- Mobile Side Menu -->
   <div
-    class="fixed inset-y-0 left-0 w-64 bg-[#8E6B5F] transform transition-transform duration-300 z-50"
+    class="fixed inset-y-0 left-0 w-64 bg-accent transform transition-transform duration-300 z-50"
     [class.translate-x-0]="menuOpen"
     [class.-translate-x-full]="!menuOpen"
   >
     <div class="flex flex-col p-6 space-y-6 mt-10 text-white text-lg">
-      <a routerLink="/home" (click)="closeMenu()">Home</a>
+      <a routerLink="/" (click)="closeMenu()">Home</a>
       <a routerLink="/work" (click)="closeMenu()">Work</a>
+      <a routerLink="/about" (click)="closeMenu()">About</a>
       <a routerLink="/contact" (click)="closeMenu()">Contact</a>
     </div>
 
