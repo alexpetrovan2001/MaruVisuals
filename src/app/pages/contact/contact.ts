@@ -19,22 +19,22 @@ export class ContactComponent {
     contacts: ContactDetails[] = [
       {
         logo: INSTAGRAM_ICON,
-        image: 'contact_1.jpg',
+        image: 'contact_1.webp',
         url: '',
       },
       {
         logo: FACEBOOK_ICON,
-        image: 'contact_2.jpg',
+        image: 'contact_2.webp',
         url: ''
       },
       {
         logo: GMAIL_ICON,
-        image: 'contact_3.jpg',
+        image: 'contact_3.webp',
         url: ''
       },
       {
         logo: LINKEDIN_ICON,
-        image: 'contact_4.jpg',
+        image: 'contact_4.webp',
         url: ''
       }
   ]

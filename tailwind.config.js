@@ -17,6 +17,25 @@ module.exports = {
         },
         highlight: '#EEEAE5',
       },
+      // colors: {
+      //   // Background
+      //   bg: '#6D4C41', // warm brown
+      //
+      //   // Text colors
+      //   text: {
+      //     DEFAULT: '#F5F5F5',      // light cream for good contrast
+      //     secondary: '#D6CFC2',    // softer off-white for secondary text
+      //   },
+      //
+      //   // Accent colors (buttons, links, highlights)
+      //   accent: {
+      //     DEFAULT: '#A78B6F',       // muted tan/coffee tone
+      //     hover: '#C9A678',         // warmer hover shade
+      //   },
+      //
+      //   // Highlight / cards / overlays
+      //   highlight: '#EDE4DC',       // light warm neutral
+      // },
     },
   },
   plugins: [],

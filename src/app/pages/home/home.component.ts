@@ -24,7 +24,7 @@ export class HomeComponent {
       {
         name: 'Nham Village Resort - Vietnam',
         route: '/nham-village',
-        logo: BASE_LOGO_REF + 'nham-village.png',
+        logo: BASE_LOGO_REF + 'nham.png',
         sampleImage:  BASE_IMAGE_REF + 'sample.jpg'
       },
       {
@@ -48,7 +48,7 @@ export class HomeComponent {
       {
         name: 'Movenpick',
         route: '/movenpick',
-        logo: BASE_LOGO_REF + 'movenpick.svg',
+        logo: BASE_LOGO_REF + 'movenpick_2.png',
         sampleImage: BASE_IMAGE_REF + 'sample.jpg'
       }
     ];
