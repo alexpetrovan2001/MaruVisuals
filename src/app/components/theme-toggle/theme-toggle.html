@@ -1,0 +1,37 @@
+<button
+  (click)="toggleTheme()"
+  class="theme-button"
+>
+  <!-- Circle that slides -->
+  <span
+    class="absolute w-6 h-6 bg-bg rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center"
+    [ngClass]="{
+      'translate-x-1': !isDark,
+      'translate-x-9': isDark
+    }"
+  >
+    @if(!isDark){
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="w-4 h-4 text-accent"
+      >
+      <path
+        d="M12 4.5a1 1 0 0 1 1 1v.75a1 1 0 1 1-2 0V5.5a1 1 0 0 1 1-1zM6.22 6.22a1 1 0 0 1 1.42 0l.53.53a1 1 0 1 1-1.42 1.42l-.53-.53a1 1 0 0 1 0-1.42zm11.56 0a1 1 0 0 1 0 1.42l-.53.53a1 1 0 1 1-1.42-1.42l.53-.53a1 1 0 0 1 1.42 0zM12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm-7 4a1 1 0 0 1 1-1h.75a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1zm14 0a1 1 0 0 1 1-1h.75a1 1 0 1 1 0 2H20a1 1 0 0 1-1-1zm-2.75 5.28a1 1 0 0 1 1.42 1.42l-.53.53a1 1 0 1 1-1.42-1.42l.53-.53zm-9.5 0 .53.53a1 1 0 0 1-1.42 1.42l-.53-.53a1 1 0 1 1 1.42-1.42zM12 18.75a1 1 0 0 1 1 1V20.5a1 1 0 1 1-2 0v-.75a1 1 0 0 1 1-1z"
+      />
+    </svg>
+    } @else {
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="w-4 h-4 text-accent"
+      >
+      <path
+        d="M21.64 13.66A9 9 0 0 1 10.34 2.36a7 7 0 1 0 11.3 11.3z"
+      />
+    </svg>
+    }
+  </span>
+</button>

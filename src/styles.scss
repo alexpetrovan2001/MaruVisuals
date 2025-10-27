@@ -4,15 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-bg: #F6F5F3;
+  --color-text: #2B2B2B;
+  --color-text-secondary: #6A6A6A;
+  --color-accent: #5A7184;
+  --color-accent-hover: #7B94A7;
+  --color-highlight: #EEEAE5;
+}
+
+/* Dark Theme */
+.dark {
+  --color-bg: #6D4C41;               /* warm brown */
+  --color-text: #F5F5F5;             /* light cream */
+  --color-text-secondary: #D6CFC2;   /* off-white */
+  --color-accent: #A78B6F;           /* muted tan */
+  --color-accent-hover: #C9A678;     /* warm hover */
+  --color-highlight: #EDE4DC;        /* warm neutral */
+}
+
 @layer base {
   body {
-    //figma background color
-    //background-color: #6D4C41;
-    //figma light-background color
-    //background-color: #B8AFAA;
-    // light background
-    //background-color: #FAF9F7;
-
     margin: 0;
     @apply font-[Grift];
     @apply text-text;

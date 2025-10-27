@@ -10,8 +10,8 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: #5A7184; /* accent color */
   transition: all 0.3s ease;
+  @apply bg-accent
 }
 
 .nav-link:hover::after,

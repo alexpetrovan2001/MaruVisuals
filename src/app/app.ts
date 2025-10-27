@@ -3,10 +3,11 @@ import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {NavBarComponent} from './components/navbar/navbar';
 import {filter} from 'rxjs';
 import {Footer} from './components/footer/footer';
+import {ThemeToggle} from './components/theme-toggle/theme-toggle';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBarComponent, Footer],
+  imports: [RouterOutlet, NavBarComponent, Footer, ThemeToggle],
   templateUrl: './app.html',
   standalone: true,
   styleUrl: './app.scss'
