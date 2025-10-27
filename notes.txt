@@ -1,0 +1,7 @@
+1. Home inlocuit cu landing page, sa fie lasat buton spre landing (home) in navbar -> home devine work
+2. Vezi de ce nu se modifica fundalu cand schimbi in tailwind
+3. Urm pagina de clienti
+4. About u - structura de la Maxim Oprea
+5. Reel
+6. Iconite cu social in footer
+7. Home page - fara scris pe mobil

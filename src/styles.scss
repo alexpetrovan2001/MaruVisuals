@@ -4,15 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #6D4C41;
-  margin: 0;
-  @apply font-[Newsreader];
-  @apply text-[white]
+@layer base {
+  body {
+    //figma background color
+    //background-color: #6D4C41;
+    //figma light-background color
+    //background-color: #B8AFAA;
+    // light background
+    //background-color: #FAF9F7;
+
+    margin: 0;
+    @apply font-[Grift];
+    @apply text-text;
+  }
+
 }
 
 @layer components {
   .btn {
-    @apply text-white font-bold py-3 px-8 rounded-md bg-[#D7CCC8] hover:bg-[#B8AFAA] transition-colors duration-300;
+    @apply text-text font-bold py-3 px-8 rounded-md bg-accent hover:bg-accent-hover transition-colors duration-300;
   }
 }

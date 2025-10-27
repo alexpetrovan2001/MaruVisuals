@@ -1,9 +1,8 @@
-import {Component, signal} from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
-import {of} from 'rxjs';
-import {Router, RouterLink} from '@angular/router';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 import {ClientDetails} from '../../models/client-details.model';
 import {ClientCard} from '../../components/client-card/client-card';
+import {BASE_IMAGE_REF, BASE_LOGO_REF} from '../../shared/constants';
 
 @Component({
   selector: 'app-home',
@@ -15,40 +14,43 @@ import {ClientCard} from '../../components/client-card/client-card';
   standalone: true
 })
 export class HomeComponent {
-    baseLogoRef = "assets/logo/"
-    baseImageRef = "assets/images/"
-
     clients: ClientDetails[] = [
       {
-        name: 'Aarunya',
+        name: 'Aarunya Nature Resort - Sri Lanka',
         route: '/aarunya',
-        logo: this.baseLogoRef + 'aarunya.svg',
-        sampleImage: this.baseImageRef + 'sample.jpg'
+        logo: BASE_LOGO_REF + 'aarunya.svg',
+        sampleImage: BASE_IMAGE_REF + 'sample_arunya.png'
       },
       {
-        name: 'Nham Village',
+        name: 'Nham Village Resort - Vietnam',
         route: '/nham-village',
-        logo: this.baseLogoRef + 'nham-village.svg',
-        sampleImage: this.baseImageRef + 'sample.jpg'
+        logo: BASE_LOGO_REF + 'nham-village.png',
+        sampleImage:  BASE_IMAGE_REF + 'sample.jpg'
       },
       {
-        name: 'Tam Toc',
+        name: 'Tam Toc Garden Resort - Vietnam',
         route: '/tam-toc',
-        logo: this.baseLogoRef + 'tam-toc.webp',
-        sampleImage: this.baseImageRef + 'sample.jpg'
+        logo: BASE_LOGO_REF + 'tam-coc-garden.svg',
+        sampleImage: BASE_IMAGE_REF + 'sample.jpg'
       },
       {
         name: 'Topas Ecolodge',
         route: '/topas-ecolodge',
-        logo: this.baseLogoRef + 'topas-ecolodge.svg',
-        sampleImage: this.baseImageRef + 'sample.jpg'
+        logo: BASE_LOGO_REF + 'topas-ecolodge.svg',
+        sampleImage: BASE_IMAGE_REF + 'sample.jpg'
       },
       {
         name: 'Westin',
         route: '/westin',
-        logo: this.baseLogoRef + 'westin.svg',
-        sampleImage: this.baseImageRef + 'sample.jpg'
+        logo: BASE_LOGO_REF + 'westin.svg',
+        sampleImage: BASE_IMAGE_REF + 'sample.jpg'
       },
+      {
+        name: 'Movenpick',
+        route: '/movenpick',
+        logo: BASE_LOGO_REF + 'movenpick.svg',
+        sampleImage: BASE_IMAGE_REF + 'sample.jpg'
+      }
     ];
 
   constructor(private router: Router) {}

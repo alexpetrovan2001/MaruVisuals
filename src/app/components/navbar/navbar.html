@@ -1,13 +1,25 @@
-<nav class="w-full bg-transparent z-50 flex items-center justify-between px-6 py-4">
+<!--<nav class="bg-[#B8AFAA] rounded-md z-50 flex items-center justify-between px-6 py-4 mt-4 ml-4 mr-4">-->
+<nav class="z-50 flex items-center justify-between px-6 py-4">
+
   <!-- Logo -->
   <div class="absolute left-1/2 transform -translate-x-1/2">
     <img src="assets/logo.svg" alt="MARU Logo" class="h-8 md:h-10 w-auto" />
   </div>
+
   <!-- Desktop Links -->
-  <ul class="hidden lg:flex space-x-10 text-white text-lg ml-auto">
-    <li><a routerLink="home" routerLinkActive="underline" class="hover:underline">Home</a></li>
-    <li><a routerLink="work" routerLinkActive="underline" class="hover:underline">Work</a></li>
-    <li><a routerLink="contact" routerLinkActive="underline" class="hover:underline">Contact</a></li>
+  <ul class="hidden lg:flex space-x-10 text-lg ml-auto">
+    <li>
+      <a routerLink="/home" routerLinkActive="active" class="nav-link">HOME</a>
+    </li>
+    <li>
+      <a routerLink="/work" routerLinkActive="active" class="nav-link">WORK</a>
+    </li>
+    <li>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link">ABOUT</a>
+    </li>
+    <li>
+      <a routerLink="/contact" routerLinkActive="active" class="nav-link">CONTACT</a>
+    </li>
   </ul>
 
   <!-- Mobile Menu Button -->
