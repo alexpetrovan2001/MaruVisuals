@@ -11,6 +11,6 @@ export class LandingComponent {
   constructor(private router: Router) {}
 
   enterSite() {
-    this.router.navigate(['/home']); // Navigate to the main site
+    this.router.navigate(['/work']); // Navigate to the main site
   }
 }

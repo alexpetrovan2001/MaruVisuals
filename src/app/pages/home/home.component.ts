@@ -19,7 +19,7 @@ export class HomeComponent {
         name: 'Aarunya Nature Resort - Sri Lanka',
         route: '/aarunya',
         logo: BASE_LOGO_REF + 'aarunya.svg',
-        sampleImage: BASE_IMAGE_REF + 'sample_arunya.png'
+        sampleImage: BASE_IMAGE_REF + 'sample_arunya.webp'
       },
       {
         name: 'Nham Village Resort - Vietnam',
