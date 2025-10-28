@@ -48,7 +48,7 @@ export class HomeComponent {
       {
         name: 'Movenpick',
         route: '/movenpick',
-        logo: BASE_LOGO_REF + 'movenpick_2.png',
+        logo: BASE_LOGO_REF + 'movenpick.png',
         sampleImage: BASE_IMAGE_REF + 'sample.jpg'
       }
     ];
