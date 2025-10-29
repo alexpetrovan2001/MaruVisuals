@@ -30,4 +30,26 @@
       class="object-cover"
     />
   </picture>
+  @if(client?.landscapeImage2 && client?.portraitImage2){
+    <picture class="pt-1">
+      <!-- Landscape (default for large screens) -->
+      <source
+        media="(min-aspect-ratio: 1/1)"
+        [srcset]="client?.landscapeImage2"
+        type="image/webp"
+      />
+      <!-- Portrait (for phones or vertical screens) -->
+      <source
+        media="(max-aspect-ratio: 1/1)"
+        [srcset]="client?.portraitImage2"
+        type="image/webp"
+      />
+      <!-- Fallback image -->
+      <img
+        [src]="client?.sampleImage"
+        [alt]="client?.name + ' collage'"
+        class="object-cover"
+      />
+    </picture>
+  }
 </div>

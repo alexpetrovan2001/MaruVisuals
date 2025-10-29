@@ -6,7 +6,9 @@ export interface ClientDetails {
   route: string;
   sampleImage?: string;
   landscapeImage?: string;
+  landscapeImage2?: string;
   portraitImage?: string;
+  portraitImage2?: string;
 }
 
 export const CLIENTS: ClientDetails[] = [
@@ -24,7 +26,9 @@ export const CLIENTS: ClientDetails[] = [
     logo: BASE_LOGO_REF + 'nham.png',
     sampleImage: BASE_CLIENT_IMAGE_REF + 'nham-village/sample.png',
     landscapeImage: BASE_CLIENT_IMAGE_REF + 'nham-village/landscape.png',
-    portraitImage: BASE_CLIENT_IMAGE_REF + 'nham-village/portrait.png'
+    portraitImage: BASE_CLIENT_IMAGE_REF + 'nham-village/portrait.png',
+    landscapeImage2: BASE_CLIENT_IMAGE_REF + 'nham-village/landscape_2.png',
+    portraitImage2: BASE_CLIENT_IMAGE_REF + 'nham-village/portrait_2.png'
   },
   {
     name: 'Tam Coc Garden Resort - Vietnam',

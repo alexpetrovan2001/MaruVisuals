@@ -2,12 +2,12 @@
   <!-- Background Video -->
   <video oncanplay="this.play()" onloadedmetadata="this.muted = true" loop
          class="absolute top-0 left-0 w-full h-full object-cover"
-         src="assets/videos/landing_video.mp4">
+         src="assets/videos/landing_video_3.mp4">
     Your browser does not support the video tag.
   </video>
 
   <!-- Centered Logo -->
-  <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+  <div class="absolute inset-x-0 top-2/4 flex flex-col items-center z-10">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 300 80"
@@ -18,7 +18,7 @@
         y="50%"
         font-family="Grift, serif"
         font-size="64"
-        fill="currentColor"
+        fill="white"
         text-anchor="middle"
         dominant-baseline="middle"
       >
@@ -28,7 +28,7 @@
 
     <button
       (click)="enterSite()"
-      class="btn"
+      class="btn text-white"
     >
       Enter
     </button>
