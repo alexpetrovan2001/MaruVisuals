@@ -1,11 +1,29 @@
 <footer class="w-full text-center py-4 bg-bg">
-  <p class="text-sm tracking-wide">
-    © {{ currentYear }} Maru Visuals. All rights reserved.
-  </p>
+  <!-- Social Icons -->
+  <div class="flex justify-center items-center gap-4 mb-3">
+    <!-- X (Twitter) -->
+    <a href="https://x.com/" target="_blank" class="hover:text-accent-hover">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.656l-5.215-6.833-5.963 6.833H1.685l7.73-8.855L1.254 2.25h6.826l4.713 6.211 5.451-6.211zM17.09 19.66h1.832L7.046 4.13H5.087l12.003 15.53z"/>
+      </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://facebook.com/" target="_blank" class="hover:text-accent-hover">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M22.676 0H1.326C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.326 24h11.494v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.657-4.788 1.324 0 2.463.099 2.794.143v3.24h-1.918c-1.505 0-1.797.716-1.797 1.764v2.314h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.676 0"/>
+      </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/" target="_blank" class="hover:text-accent-hover">
+      <svg viewBox="0 0 24 24" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12.003 5.848A6.142 6.142 0 005.85 12a6.142 6.142 0 006.152 6.152A6.142 6.142 0 0018.155 12a6.142 6.142 0 00-6.152-6.152zm0 10.152c-2.2 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.8 4-4 4zM19.84 5.596c0 .798-.642 1.435-1.435 1.435a1.435 1.435 0 111.435-1.435zm4.075 1.457c-.091-1.922-.53-3.625-1.939-5.028C20.575.622 18.872.183 16.95.087c-1.981-.112-7.919-.112-9.9 0-1.917.091-3.62.53-5.027 1.933C.614 3.423.18 5.125.084 7.047c-.112 1.981-.112 7.92 0 9.9.091 1.922.53 3.625 1.939 5.028 1.408 1.403 3.105 1.842 5.027 1.938 1.981.112 7.919.112 9.9 0 1.922-.091 3.625-.53 5.027-1.938 1.403-1.403 1.842-3.106 1.939-5.028.112-1.98.112-7.913 0-9.894zm-2.56 12.02a4.049 4.049 0 01-2.28 2.28c-1.58.627-5.328.483-7.073.483-1.746 0-5.499.139-7.073-.482a4.05 4.05 0 01-2.281-2.281c-.626-1.58-.482-5.328-.482-7.073s-.14-5.499.482-7.073a4.05 4.05 0 012.28-2.28c1.58-.627 5.328-.483 7.074-.483 1.745 0 5.498-.139 7.073.482a4.05 4.05 0 012.28 2.281c.627 1.58.482 5.328.482 7.073s.145 5.499-.482 7.073z"></path></svg>
+    </a>
+  </div>
 
   <!-- Contact Prompt -->
   <div class="flex justify-center items-center gap-3">
-    <span class="text-sm">Did you like this portofolio?</span>
+    <span class="text-sm">Created by</span>
     <a href="https://www.linkedin.com/in/alex-petrovan-63aa70223" target="_blank" class="hover:text-accent-hover">
       <!-- LinkedIn Icon (SVG) -->
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -13,4 +31,8 @@
       </svg>
     </a>
   </div>
+
+  <p class="text-sm tracking-wide mt-3">
+    © {{ currentYear }} Maru Visuals. All rights reserved.
+  </p>
 </footer>

@@ -1,5 +1,5 @@
 <div>
-  <div class="relative w-full h-64 group cursor-pointer overflow-hidden shadow-lg">
+  <div class="relative w-full h-96 group cursor-pointer overflow-hidden shadow-lg">
     <!-- Background Image -->
     <img [src]="client.sampleImage" alt="{{client.name}} image" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
 
@@ -11,7 +11,7 @@
     <!-- Center Logo -->
     <img [src]="client.logo" alt="{{client.name}} logo" class="absolute inset-0 m-auto w-48 h-24 object-contain transition-all duration-300 group-hover:opacity-0">
   </div>
-  <h2 class="mt-4">
+  <h2 class="mt-4 hidden sm:block">
     {{client.name}}
   </h2>
 </div>
