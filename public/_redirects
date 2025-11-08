@@ -1,6 +1,0 @@
-# 1️⃣ Redirect all traffic from Netlify subdomain to your custom domain
-https://maru-visuals.netlify.app/* https://www.maruvisuals.com/:splat 301!
-
-# 2️⃣ Catch-all for SPA routing (serve index.html for all other paths)
-# This must come after the domain redirect
-/* /index.html 200
