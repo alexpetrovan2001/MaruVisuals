@@ -1,17 +1,19 @@
-<div class="max-w-screen-xl mx-auto">
-  <div class="relative w-full h-96 group cursor-pointer overflow-hidden">
+<div class="">
+  <div class="relative w-full h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[70vh] xl:h-[90vh] snap-center cursor-pointer group overflow-hidden"
+    [class.active]="isActive && mobile"
+  >
     <!-- Background Image -->
-    <img [src]="client.sampleImage" alt="{{client.name}} image" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+    <img [src]="client.sampleImage" alt="{{client.name}} image"
+         class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 lg:group-hover:scale-105">
 
     <!-- Overlay (hidden by default, shows on hover) -->
-    <div class="absolute inset-0 bg-white bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-      <button class="px-4 py-2 bg-accent text-text rounded hover:bg-accent-hover transition z-10" (click)="onViewMore()">View More</button>
+    <div class="absolute inset-0 bg-white bg-opacity-70 opacity-0 transition-opacity duration-300 flex items-center justify-center lg:group-hover:opacity-100">
+      <button class="px-4 py-2 bg-accent text-text rounded hover:bg-accent-hover transition z-10"
+              (click)="onViewMore()">View More</button>
     </div>
 
     <!-- Center Logo -->
-    <img [src]="client.logo" alt="{{client.name}} logo" class="absolute inset-0 m-auto w-48 h-24 object-contain transition-all duration-300 group-hover:opacity-0">
+    <img [src]="client.logo" alt="{{client.name}} logo"
+         class="absolute inset-0 m-auto w-48 h-24 object-contain transition-all duration-300 lg:group-hover:opacity-0">
   </div>
-<!--  <h2 class="mt-4 hidden sm:block">-->
-<!--    {{client.name}}-->
-<!--  </h2>-->
 </div>

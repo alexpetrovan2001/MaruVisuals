@@ -1,0 +1,23 @@
+@media (max-width: 1024px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  app-client-card {
+    scroll-snap-align: center;
+    height: 70vh;
+  }
+
+ .active img[alt$="image"] {
+  transform: scale(1.05);
+  }
+
+  .active .bg-opacity-70 {
+    opacity: 1 !important;
+  }
+
+  .active img[alt$="logo"] {
+    opacity: 0;
+  }
+}

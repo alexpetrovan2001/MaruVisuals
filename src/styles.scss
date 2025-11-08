@@ -46,3 +46,10 @@
 .animate-fadeIn {
   animation: fadeIn 0.8s ease-out both;
 }
+
+@media (max-width: 1024px) {
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory; /* vertical snap only on mobile */
+  }
+}
