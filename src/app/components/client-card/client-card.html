@@ -3,7 +3,7 @@
     [class.active]="isActive && mobile"
   >
     <!-- Background Image -->
-    <img [src]="client.sampleImage" alt="{{client.name}} image"
+    <img [src]="client.sampleImage" alt="{{client.name}} image" loading="lazy"
          class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 lg:group-hover:scale-105">
 
     <!-- Overlay (hidden by default, shows on hover) -->

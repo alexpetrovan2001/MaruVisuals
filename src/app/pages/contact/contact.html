@@ -41,40 +41,47 @@
 <!--    }-->
 <!--  </div>-->
 
-  <div class="py-16 px-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full h-96 lg:h-[30rem] gap-0">
-    @for (contact of contacts; track contact) {
-      <div class="relative group w-full h-full">
-        <div class="flip-inner w-full h-full relative">
-          <!-- FRONT -->
-          <div class="flip-front absolute inset-0">
-            <img
-              src="{{ BASE_IMAGE_REF }}contact/{{ contact.image }}"
-              alt="Contact image"
-              class="w-full h-full object-cover"
-            />
-          </div>
+<!--  <div class="py-16 px-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full h-96 lg:h-[30rem] gap-0">-->
+<!--    @for (contact of contacts; track contact) {-->
+<!--      <div class="relative group w-full h-full">-->
+<!--        <div class="flip-inner w-full h-full relative">-->
+<!--          &lt;!&ndash; FRONT &ndash;&gt;-->
+<!--          <div class="flip-front absolute inset-0">-->
+<!--            <img-->
+<!--              src="{{ BASE_IMAGE_REF }}contact/{{ contact.image }}"-->
+<!--              alt="Contact image"-->
+<!--              loading="lazy"-->
+<!--              class="w-full h-full object-cover"-->
+<!--            />-->
+<!--          </div>-->
 
-          <!-- BACK (same image, colored overlay, and icon) -->
-          <div class="flip-back absolute z-0 inset-0 backface-hidden rotate-y-180 flex items-center justify-center">
-            <img src="{{ BASE_IMAGE_REF }}contact/{{ contact.image }}" alt="Contact image" class="w-full h-full object-cover" />
+<!--          &lt;!&ndash; BACK (same image, colored overlay, and icon) &ndash;&gt;-->
+<!--          <div class="flip-back absolute z-0 inset-0 backface-hidden rotate-y-180 flex items-center justify-center">-->
+<!--            <img src="{{ BASE_IMAGE_REF }}contact/{{ contact.image }}"-->
+<!--                 alt="Contact image"-->
+<!--                 loading="lazy"-->
+<!--                 class="w-full h-full object-cover" />-->
 
-            <div class="absolute inset-0 bg-highlight/80 z-0"></div>
+<!--            <div class="absolute inset-0 bg-highlight/80 z-0"></div>-->
 
-            <a href="{{ contact.url }}" target="_blank"
-               class="absolute z-10 w-24 h-24 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-accent hover:text-accent-hover">
-              <svg xmlns="http://www.w3.org/2000/svg" class="" fill="currentColor" viewBox="0 0 32 32">
-                <path [attr.d]="contact.logo"/>
-              </svg>
+<!--            <a href="{{ contact.url }}" target="_blank"-->
+<!--               class="absolute z-10 w-24 h-24 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-accent hover:text-accent-hover">-->
+<!--              <svg xmlns="http://www.w3.org/2000/svg" class="" fill="currentColor" viewBox="0 0 32 32">-->
+<!--                <path [attr.d]="contact.logo"/>-->
+<!--              </svg>-->
 
-            </a>
-          </div>
-        </div>
-      </div>
-    }
-  </div>
-
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    }-->
+<!--  </div>-->
   <div class="max-w-2xl mx-auto px-6">
-    <h2 class="text-3xl mb-8 text-center">Contact</h2>
+    <h2 class="text-3xl md:text-4xl my-8 text-center">
+      Every story starts with a conversation.
+      Reach out, and let’s start shaping yours.
+    </h2>
+    <h2></h2>
     <form class="flex flex-col gap-4">
       <input type="text" placeholder="Your Name" class="border rounded-md p-3" />
       <input type="email" placeholder="Your Email" class="border rounded-md p-3" />
