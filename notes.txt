@@ -6,5 +6,5 @@
 // 6. Iconite cu social in footer
 // 7. Home page - fara scris pe mobil
 // 9. About page styling corrected - margins responsive not text blocks
-10. Culoare logo schimbata pe client page
+// 10. Culoare logo schimbata pe client page
 // 11. Telefon work page focus image on scroll and center screen
