@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 // import {ContactDetails} from '../../models/contact-details.model';
 // import {
 //   BASE_IMAGE_REF,
@@ -8,13 +9,14 @@ import { Component } from '@angular/core';
 //   INSTAGRAM_ICON,
 //   LINKEDIN_ICON
 // } from '../../shared/constants';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
-  standalone: true
+  standalone: true,
+  imports: [FormsModule, RouterModule],
 })
 export class ContactComponent {
   //   contacts: ContactDetails[] = [

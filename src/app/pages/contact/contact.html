@@ -87,56 +87,42 @@
       Reach out, and let’s start shaping yours.
     </h2>
     <h2></h2>
-    <form 
-  class="flex flex-col gap-4"
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  action="/success"
->
 
-  <input type="hidden" name="form-name" value="contact">
-
-  <input type="hidden" name="redirect" value="/success">
-
-  <!-- optional email subject -->
-  <input 
-    type="hidden" 
-    name="subject"
-    value="Contact Form Submission from Maru Visuals Website"
-  >
-
-  <input 
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-    class="border rounded-md p-3"
-  />
-
-  <input 
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-    class="border rounded-md p-3"
-  />
-
-  <textarea 
-    name="message"
-    placeholder="Your Message"
-    required
-    class="border rounded-md p-3 h-32"
-  ></textarea>
-
-  <button 
-    type="submit"
-    class="btn"
-  >
-    Send Message
-  </button>
-
-</form>
+	<form
+	  class="flex flex-col gap-4"
+	  name="contact"
+	  (ngSubmit)="onSubmit()"
+	>
+	  <input type="hidden" name="form-name" value="contact" />
+	
+	  <input
+	    type="text"
+	    name="name"
+	    [(ngModel)]="formData.name"
+	    placeholder="Your Name"
+	    required
+	    class="border rounded-md p-3"
+	  />
+	
+	  <input
+	    type="email"
+	    name="email"
+	    [(ngModel)]="formData.email"
+	    placeholder="Your Email"
+	    required
+	    class="border rounded-md p-3"
+	  />
+	
+	  <textarea
+	    name="message"
+	    [(ngModel)]="formData.message"
+	    placeholder="Your Message"
+	    required
+	    class="border rounded-md p-3 h-32"
+	  ></textarea>
+	
+	  <button type="submit" class="btn">Send Message</button>
+	</form>
   </div>
 
   </section>
