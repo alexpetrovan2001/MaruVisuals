@@ -76,17 +76,24 @@
 <!--      </div>-->
 <!--    }-->
 <!--  </div>-->
+
+
+  <!-- LAST USED FORM -->
+
+
   <div class="max-w-2xl mx-auto px-6">
     <h2 class="text-3xl md:text-4xl my-8 text-center">
       Every story starts with a conversation.
       Reach out, and let’s start shaping yours.
     </h2>
     <h2></h2>
-    <form class="flex flex-col gap-4">
+    <form class="flex flex-col gap-4" name="contact" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
       <input type="text" placeholder="Your Name" class="border rounded-md p-3" />
       <input type="email" placeholder="Your Email" class="border rounded-md p-3" />
       <textarea placeholder="Your Message" class="border rounded-md p-3 h-32"></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
   </div>
-</section>
+
+  </section>
