@@ -4,6 +4,7 @@ import {AboutComponent} from './pages/about/about';
 import {WorkComponent} from './pages/work/work';
 import {LandingComponent} from './pages/landing/landing';
 import {ClientPortofolioComponent} from './pages/client-portofolio/client-portofolio';
+import {SuccessComponent} from './pages/success/success';
 
 export const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -11,5 +12,6 @@ export const routes: Routes = [
   { path: 'work', component: WorkComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'success', component: SuccessComponent },
   { path: ':client', component: ClientPortofolioComponent },
 ];
