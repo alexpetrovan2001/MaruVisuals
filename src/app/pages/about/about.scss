@@ -1,7 +1,63 @@
 .about-text {
-  @apply text-lg leading-relaxed text-text my-6
+  @apply text-lg leading-relaxed text-text my-6;
 }
 
 .about-subtitle {
-  @apply text-3xl font-bold mb-4 sm:mt-4 text-center lg:text-left
+  @apply text-3xl font-bold mb-4 sm:mt-4 text-center lg:text-left;
 }
+
+.about-reels-section {
+  @apply py-16;
+}
+
+.reels-carousel {
+  @apply overflow-x-auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0 24px;
+}
+
+.reels-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.reels-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.reels-carousel::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.about-reel-card {
+  @apply rounded-xl overflow-hidden shadow-none bg-transparent border-none flex-shrink-0 transition-all duration-500 ease-out;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  width: min(60vw, 420px);
+  max-width: 420px;
+}
+
+.dark .reels-carousel::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+.about-reel-card iframe,
+.about-reel-card blockquote {
+  @apply w-full;
+  height: auto;
+  aspect-ratio: 9 / 16;
+}
+
+.about-reel-card .instagram-media {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.about-reel-card iframe {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
