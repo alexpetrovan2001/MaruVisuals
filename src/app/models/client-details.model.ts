@@ -17,7 +17,7 @@ export interface ClientDetails {
 
 export const CLIENTS: ClientDetails[] = [
   {
-    name: 'Four Seasons',
+    name: 'Four Seasons Hotel Bangkok at Chao Phraya River',
     route: 'four-seasons',
     sampleImage: BASE_CLIENT_IMAGE_REF + 'four_seasons/sample.png',
     landscapeImage: BASE_CLIENT_IMAGE_REF + 'four_seasons/client_1.png',
@@ -29,7 +29,7 @@ export const CLIENTS: ClientDetails[] = [
     portraitImage3: BASE_CLIENT_IMAGE_REF + 'four_seasons/client_mobile_3.png',
   },
   {
-    name: 'Rosewood',
+    name: 'Rosewood Luang Prabang',
     route: 'rosewood',
     sampleImage: BASE_CLIENT_IMAGE_REF + 'rosewood/sample.png',
     landscapeImage: BASE_CLIENT_IMAGE_REF + 'rosewood/client_1.png',
@@ -38,7 +38,7 @@ export const CLIENTS: ClientDetails[] = [
     portraitImage2: BASE_CLIENT_IMAGE_REF + 'rosewood/client_mobile_2.png',
   },
   {
-    name: 'Aarunya Nature Resort - Sri Lanka',
+    name: 'Aarunya Nature Resort',
     route: 'aarunya',
     logo: BASE_LOGO_REF + 'aarunya.png',
     sampleImage: BASE_CLIENT_IMAGE_REF + 'aarunya/sample.webp',
@@ -46,7 +46,7 @@ export const CLIENTS: ClientDetails[] = [
     portraitImage: BASE_CLIENT_IMAGE_REF + 'aarunya/client_mobile_1.png'
   },
   {
-    name: 'Nham Village Resort - Vietnam',
+    name: 'Nham Village Resort',
     route: 'nham-village',
     logo: BASE_LOGO_REF + 'nham.png',
     sampleImage: BASE_CLIENT_IMAGE_REF + 'nham-village/sample.png',
@@ -56,7 +56,7 @@ export const CLIENTS: ClientDetails[] = [
     portraitImage2: BASE_CLIENT_IMAGE_REF + 'nham-village/client_mobile_2.png'
   },
   {
-    name: 'Tam Coc Garden Resort - Vietnam',
+    name: 'Tam Coc Garden',
     route: 'tam-coc-garden',
     logo: BASE_LOGO_REF + 'tam-coc.png',
     sampleImage: BASE_CLIENT_IMAGE_REF + 'tam-coc-garden/sample.png',
@@ -72,7 +72,7 @@ export const CLIENTS: ClientDetails[] = [
     portraitImage: BASE_CLIENT_IMAGE_REF + 'topas-ecolodge/client_mobile_1.png'
   },
   {
-    name: 'Westin',
+    name: 'The Westin Resort & Spa Cam Ranh',
     route: 'westin',
     logo: BASE_LOGO_REF + 'westin.png',
     sampleImage: BASE_CLIENT_IMAGE_REF + 'westin/sample.png',
@@ -80,7 +80,7 @@ export const CLIENTS: ClientDetails[] = [
     portraitImage: BASE_CLIENT_IMAGE_REF + 'westin/client_mobile_1.png'
   },
   {
-    name: 'Movenpick',
+    name: 'Mövenpick Resort & Spa Dead Sea',
     route: 'movenpick',
     logo: BASE_LOGO_REF + 'movenpick.png',
     sampleImage: BASE_CLIENT_IMAGE_REF + 'movenpick/sample.png',
