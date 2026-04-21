@@ -9,12 +9,17 @@
     height: 70vh;
   }
 
- .active img[alt$="image"] {
-  transform: scale(1.05);
+  .active img[alt$="image"] {
+    transform: scale(1.05);
   }
 
-  .active > div {
+  /* Show overlay and view-more only when card is active */
+  .active .card-overlay {
     opacity: 1 !important;
+  }
+
+  .active .view-more-link::after {
+    width: 100% !important;
   }
 
   .active img[alt$="logo"] {
