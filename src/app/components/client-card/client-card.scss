@@ -36,7 +36,7 @@
 
 .view-more-link {
   cursor: pointer;
-  color: var(--color-text);
+  color: white;
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
@@ -52,10 +52,21 @@
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--color-text);
+  background: white;
   transition: width 0.3s ease;
 }
 
 .view-more-link:hover::after {
   width: 100%;
+}
+
+.card-container {
+  @media (min-width: 1024px) {
+    transform: scaleX(0.85);
+    transform-origin: top center;
+  }
+
+  @media (min-width: 1280px) {
+    transform: scaleX(0.9);
+  }
 }
