@@ -15,6 +15,7 @@ import {ThemeToggle} from './components/theme-toggle/theme-toggle';
 export class App {
   showNavbar = false;
   isContactPage = false;
+  routeTransition = false;
 
   constructor(private router: Router) {
     this.router.events
@@ -22,6 +23,8 @@ export class App {
       .subscribe((event: any) => {
         this.showNavbar = event.url !== '/';
         this.isContactPage = event.url === '/contact';
+        this.routeTransition = true;
+        setTimeout(() => this.routeTransition = false, 800);
       });
   }
 }

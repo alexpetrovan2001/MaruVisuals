@@ -1,0 +1,12 @@
+.landing-chevron {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  animation: chevron-pulse 2s ease-in-out infinite;
+}
+
+@keyframes chevron-pulse {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.5; }
+}

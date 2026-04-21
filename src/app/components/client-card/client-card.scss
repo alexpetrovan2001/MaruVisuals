@@ -33,3 +33,29 @@
   text-align: center;
   padding: 0 1.5rem;
 }
+
+.view-more-link {
+  cursor: pointer;
+  color: var(--color-text);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.view-more-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-text);
+  transition: width 0.3s ease;
+}
+
+.view-more-link:hover::after {
+  width: 100%;
+}
