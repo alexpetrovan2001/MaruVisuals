@@ -1,3 +1,53 @@
+.contact-bg {
+  position: relative;
+  min-height: 100vh;
+}
+
+.contact-form-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.contact-heading-main {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: white;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-heading-sub {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-field {
+  @apply rounded-md p-3 w-full;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  outline: none;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:focus {
+    border-color: white;
+  }
+}
+
 .group {
   perspective: 1000px;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -47,9 +47,9 @@
   animation: fadeIn 0.8s ease-out both;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory; /* vertical snap only on mobile */
+    scroll-snap-type: y proximity; /* proximity: only snaps when near a point, won't force-jump on load */
   }
 }

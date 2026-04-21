@@ -55,16 +55,9 @@ export class AboutComponent implements OnInit, AfterViewInit {
       return;
     }
 
-    // Choose middle card as initial focused item; fallback is first card.
-    const initialIndex = Math.floor(cards.length / 2);
-    const target = cards[initialIndex] || cards[0];
-
-    const targetCenter = target.offsetLeft + target.offsetWidth / 2;
-    const containerCenter = container.clientWidth / 2;
-    container.scrollLeft = Math.max(0, targetCenter - containerCenter);
+    container.scrollLeft = 0;
   }
 
   private onScroll() {
-    // Blur effect removed
   }
 }

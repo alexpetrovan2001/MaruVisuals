@@ -3,18 +3,22 @@
 }
 
 .about-subtitle {
-  @apply text-3xl font-bold mb-4 sm:mt-4 text-center lg:text-left;
+  @apply text-3xl font-bold mb-4 sm:mt-4 text-center;
+}
+
+.about-intro {
+  text-indent: 2rem;
 }
 
 .about-reels-section {
-  @apply py-16;
+  @apply py-4 w-full;
 }
 
 .reels-carousel {
   @apply overflow-x-auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 0 24px;
+  padding: 0 0 6px;
 }
 
 .reels-carousel::-webkit-scrollbar {
@@ -31,11 +35,18 @@
 }
 
 .about-reel-card {
-  @apply rounded-xl overflow-hidden shadow-none bg-transparent border-none flex-shrink-0 transition-all duration-500 ease-out;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-  width: min(60vw, 420px);
-  max-width: 420px;
+  @apply rounded-xl shadow-none bg-transparent border-none flex-shrink-0 transition-all duration-500 ease-out;
+  scroll-snap-align: start;
+  height: 620px;
+  width: min(85vw, 320px);
+
+  @media (min-width: 768px) {
+    width: calc(50% - 0.75rem);
+  }
+
+  @media (min-width: 1280px) {
+    width: calc(33.333% - 1rem);
+  }
 }
 
 .dark .reels-carousel::-webkit-scrollbar-thumb {
@@ -44,9 +55,7 @@
 
 .about-reel-card iframe,
 .about-reel-card blockquote {
-  @apply w-full;
-  height: auto;
-  aspect-ratio: 9 / 16;
+  @apply w-full h-full;
 }
 
 .about-reel-card .instagram-media {

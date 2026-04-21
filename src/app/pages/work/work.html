@@ -4,9 +4,10 @@
   </h2>
 </div>
 <div class="flex flex-col md:px-24 lg:px-48 pt-8 md:pt-12">
-  @for (client of clients; track client) {
+  @for (client of clients; track client; let i = $index) {
     <app-client-card
       [client]="client"
+      [isFirst]="i === 0"
       (viewMore)="navigateToClientPage(client)"
     ></app-client-card>
   }

@@ -1,13 +1,22 @@
 @if (showNavbar){
-  <div class="flex flex-col min-h-screen bg-bg">
-    <app-navbar></app-navbar>
+  <div
+    class="flex flex-col min-h-screen"
+    [class.bg-bg]="!isContactPage"
+    [class.contact-page]="isContactPage"
+    [style.background-image]="isContactPage ? 'url(assets/images/contact/fundal_contact.jpeg)' : null"
+    [style.background-size]="isContactPage ? 'cover' : null"
+    [style.background-position]="isContactPage ? 'center' : null"
+    [style.background-attachment]="isContactPage ? 'fixed' : null"
+  >
+    <app-navbar [onPhoto]="isContactPage"></app-navbar>
 
     <!-- Wrapper for page content -->
     <div class="flex-1">
       <router-outlet></router-outlet>
     </div>
+
+    <app-footer [transparent]="isContactPage"></app-footer>
   </div>
-  <app-footer></app-footer>
 }
 @else {
   <router-outlet></router-outlet>

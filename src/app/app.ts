@@ -14,12 +14,14 @@ import {ThemeToggle} from './components/theme-toggle/theme-toggle';
 })
 export class App {
   showNavbar = false;
+  isContactPage = false;
 
   constructor(private router: Router) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: any) => {
-        this.showNavbar = event.url !== "/" // hide navbar on landing page
+        this.showNavbar = event.url !== '/';
+        this.isContactPage = event.url === '/contact';
       });
   }
 }

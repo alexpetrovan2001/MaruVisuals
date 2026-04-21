@@ -1,4 +1,4 @@
-<section>
+﻿<section>
   <!-- Contact Page Grid Layer Normal Transition -->
 <!--  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full min-h-screen">-->
 <!--    &lt;!&ndash; Instagram &ndash;&gt;-->
@@ -80,49 +80,47 @@
 
   <!-- LAST USED FORM -->
 
+  <div class="contact-bg">
+    <div class="contact-form-wrapper">
+      <h1 class="contact-heading-main">Every story starts with a conversation.</h1>
+      <p class="contact-heading-sub">Reach out, and let's start shaping yours.</p>
 
-  <div class="max-w-2xl mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl my-8 text-center">
-      Every story starts with a conversation.
-      Reach out, and let’s start shaping yours.
-    </h2>
-    <h2></h2>
+      <form
+        class="flex flex-col gap-4"
+        name="contact"
+        (ngSubmit)="onSubmit()"
+      >
+        <input type="hidden" name="form-name" value="contact" />
 
-	<form
-	  class="flex flex-col gap-4"
-	  name="contact"
-	  (ngSubmit)="onSubmit()"
-	>
-	  <input type="hidden" name="form-name" value="contact" />
-	
-	  <input
-	    type="text"
-	    name="name"
-	    [(ngModel)]="formData.name"
-	    placeholder="Your Name"
-	    required
-	    class="border rounded-md p-3"
-	  />
-	
-	  <input
-	    type="email"
-	    name="email"
-	    [(ngModel)]="formData.email"
-	    placeholder="Your Email"
-	    required
-	    class="border rounded-md p-3"
-	  />
-	
-	  <textarea
-	    name="message"
-	    [(ngModel)]="formData.message"
-	    placeholder="Your Message"
-	    required
-	    class="border rounded-md p-3 h-32"
-	  ></textarea>
-	
-	  <button type="submit" class="btn">Send Message</button>
-	</form>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="formData.name"
+          placeholder="Your Name"
+          required
+          class="contact-field"
+        />
+
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="formData.email"
+          placeholder="Your Email"
+          required
+          class="contact-field"
+        />
+
+        <textarea
+          name="message"
+          [(ngModel)]="formData.message"
+          placeholder="Your Message"
+          required
+          class="contact-field h-32"
+        ></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
   </div>
 
   </section>

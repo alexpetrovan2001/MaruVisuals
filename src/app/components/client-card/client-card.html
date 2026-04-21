@@ -1,9 +1,13 @@
 <div class="">
-  <div class="relative w-full h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[70vh] xl:h-[90vh] snap-center cursor-pointer group overflow-hidden"
+  <div class="relative w-full h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[70vh] xl:h-[90vh] cursor-pointer group overflow-hidden"
+    [class.snap-center]="!isFirst"
     [class.active]="isActive && mobile"
   >
     <!-- Background Image -->
-    <img [src]="client.sampleImage" alt="{{client.name}} image" loading="lazy"
+    <img [src]="client.sampleImage" alt="{{client.name}} image"
+         [loading]="isFirst ? 'eager' : 'lazy'"
+         [attr.fetchpriority]="isFirst ? 'high' : 'low'"
+         decoding="async"
          class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 lg:group-hover:scale-105">
 
     <!-- Overlay (hidden by default, shows on hover) -->
@@ -14,6 +18,7 @@
 
     <!-- Center Logo -->
     <img [src]="client.logo" alt="{{client.name}} logo"
+         loading="lazy" decoding="async"
          class="absolute inset-0 m-auto w-48 h-24 object-contain transition-all duration-300 lg:group-hover:opacity-0">
   </div>
 </div>
