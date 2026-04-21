@@ -1,3 +1,17 @@
-.btn {
-  @apply inline-flex items-center justify-center px-5 py-2 rounded-lg bg-accent text-white hover:bg-accent-hover;
+.success-btn {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: white;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 0.75rem 2rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: white;
+  }
 }
