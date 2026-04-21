@@ -71,12 +71,16 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
   .dark & { border-bottom-color: rgba(255, 255, 255, 0.12); }
+
+  .drawer-menu & { border-bottom-color: rgba(255, 255, 255, 0.2); }
 }
 
 .drawer-divider-top {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 
   .dark & { border-top-color: rgba(255, 255, 255, 0.12); }
+
+  .drawer-menu & { border-top-color: rgba(255, 255, 255, 0.2); }
 }
 
 /* Drawer nav links */
@@ -88,5 +92,10 @@
 
   .dark & {
     border-bottom-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .drawer-menu & {
+    @apply text-white hover:text-white/80;
+    border-bottom-color: rgba(255, 255, 255, 0.15);
   }
 }

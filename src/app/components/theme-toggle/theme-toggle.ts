@@ -11,14 +11,13 @@ import {NgClass} from '@angular/common';
   standalone: true
 })
 export class ThemeToggle implements OnInit {
-  isDark = false;
+  isDark = true;
 
   ngOnInit() {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark'){
-      this.isDark = true
-      document.documentElement.classList.add('dark');
-    }
+    // Theme toggle is currently disabled; dark mode is always active
+    this.isDark = true;
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
   }
 
   toggleTheme() {

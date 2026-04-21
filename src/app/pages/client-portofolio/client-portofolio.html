@@ -4,7 +4,7 @@
   <h1 class="text-2xl md:text-3xl tracking-widest text-text text-center mb-12">{{ client?.name }}.</h1>
 
   <!-- Collage -->
-  <picture>
+  <picture class="w-full max-w-4xl">
     <!-- Landscape (default for large screens) -->
     <source
       media="(min-aspect-ratio: 1/1)"
@@ -22,11 +22,11 @@
       [src]="client?.sampleImage"
       [alt]="client?.name + ' collage'"
       loading="lazy"
-      class="object-cover"
+      class="object-cover w-full"
     />
   </picture>
   @if(client?.landscapeImage2 && client?.portraitImage2){
-    <picture class="pt-1">
+    <picture class="pt-1 w-full max-w-4xl">
       <!-- Landscape (default for large screens) -->
       <source
         media="(min-aspect-ratio: 1/1)"
@@ -44,12 +44,12 @@
         [src]="client?.sampleImage"
         [alt]="client?.name + ' collage'"
         loading="lazy"
-        class="object-cover"
+        class="object-cover w-full"
       />
     </picture>
   }
-  @if(client?.landscapeImage3){
-    <picture class="pt-1">
+  @if(client?.landscapeImage3 && client?.portraitImage3){
+    <picture class="pt-1 w-full max-w-4xl">
       <source
         media="(min-aspect-ratio: 1/1)"
         [srcset]="client?.landscapeImage3"
@@ -57,19 +57,19 @@
       />
       <source
         media="(max-aspect-ratio: 1/1)"
-        [srcset]="client?.portraitImage3 || client?.sampleImage"
+        [srcset]="client?.portraitImage3"
         type="image/webp"
       />
       <img
         [src]="client?.sampleImage"
         [alt]="client?.name + ' collage'"
         loading="lazy"
-        class="object-cover"
+        class="object-cover w-full"
       />
     </picture>
   }
-  @if(client?.landscapeImage4){
-    <picture class="pt-1">
+  @if(client?.landscapeImage4 && client?.portraitImage4){
+    <picture class="pt-1 w-full max-w-4xl">
       <source
         media="(min-aspect-ratio: 1/1)"
         [srcset]="client?.landscapeImage4"
@@ -77,14 +77,14 @@
       />
       <source
         media="(max-aspect-ratio: 1/1)"
-        [srcset]="client?.portraitImage4 || client?.sampleImage"
+        [srcset]="client?.portraitImage4"
         type="image/webp"
       />
       <img
         [src]="client?.sampleImage"
         [alt]="client?.name + ' collage'"
         loading="lazy"
-        class="object-cover"
+        class="object-cover w-full"
       />
     </picture>
   }
