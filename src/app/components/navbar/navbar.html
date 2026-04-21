@@ -38,10 +38,14 @@
 
   <!-- Mobile Menu Button -->
   <button
-    class="lg:hidden text-text text-3xl"
+    class="hamburger lg:hidden"
+    [class.open]="menuOpen"
     (click)="toggleMenu()"
+    aria-label="Toggle menu"
   >
-    ☰
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 
   <!-- Backdrop -->
@@ -54,34 +58,27 @@
 
   <!-- Mobile Side Menu -->
   <div
-    class="fixed inset-y-0 left-0 w-64 bg-accent transform transition-transform duration-300 z-50 flex flex-col"
+    class="fixed inset-y-0 left-0 w-80 bg-accent transform transition-transform duration-300 ease-in-out z-50 flex flex-col"
     [class.translate-x-0]="menuOpen"
     [class.-translate-x-full]="!menuOpen"
   >
-    <div class="flex flex-col p-6 space-y-6 mt-10 text-white text-lg">
-      <a routerLink="/" (click)="closeMenu()">Home</a>
-      <a routerLink="/work" (click)="closeMenu()">Work</a>
-      <a routerLink="/about" (click)="closeMenu()">About</a>
-      <a routerLink="/contact" (click)="closeMenu()">Contact</a>
-    </div>
+    <!-- Nav links -->
+    <nav class="flex flex-col px-8 pt-16 gap-1">
+      <a routerLink="/" (click)="closeMenu()" class="drawer-link text-white">Home</a>
+      <a routerLink="/work" (click)="closeMenu()" class="drawer-link text-white">Work</a>
+      <a routerLink="/about" (click)="closeMenu()" class="drawer-link text-white">About</a>
+      <a routerLink="/contact" (click)="closeMenu()" class="drawer-link text-white">Contact</a>
+    </nav>
 
     <!-- Social links pinned to bottom -->
-    <div class="absolute bottom-0 left-0 w-full p-6 flex flex-col gap-3 border-t border-white/20">
-      <a href="https://www.instagram.com/maru.visuals/" target="_blank" class="flex items-center gap-3 text-white hover:text-white/70">
-        <svg viewBox="0 0 24 24" class="w-5 h-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12.003 5.848A6.142 6.142 0 005.85 12a6.142 6.142 0 006.152 6.152A6.142 6.142 0 0018.155 12a6.142 6.142 0 00-6.152-6.152zm0 10.152c-2.2 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.8 4-4 4zM19.84 5.596c0 .798-.642 1.435-1.435 1.435a1.435 1.435 0 111.435-1.435zm4.075 1.457c-.091-1.922-.53-3.625-1.939-5.028C20.575.622 18.872.183 16.95.087c-1.981-.112-7.919-.112-9.9 0-1.917.091-3.62.53-5.027 1.933C.614 3.423.18 5.125.084 7.047c-.112 1.981-.112 7.92 0 9.9.091 1.922.53 3.625 1.939 5.028 1.408 1.403 3.105 1.842 5.027 1.938 1.981.112 7.919.112 9.9 0 1.922-.091 3.625-.53 5.027-1.938 1.403-1.403 1.842-3.106 1.939-5.028.112-1.98.112-7.913 0-9.894zm-2.56 12.02a4.049 4.049 0 01-2.28 2.28c-1.58.627-5.328.483-7.073.483-1.746 0-5.499.139-7.073-.482a4.05 4.05 0 01-2.281-2.281c-.626-1.58-.482-5.328-.482-7.073s-.14-5.499.482-7.073a4.05 4.05 0 012.28-2.28c1.58-.627 5.328-.483 7.074-.483 1.745 0 5.498-.139 7.073.482a4.05 4.05 0 012.28 2.281c.627 1.58.482 5.328.482 7.073s.145 5.499-.482 7.073z"></path></svg>
+    <div class="absolute bottom-0 left-0 w-full px-8 py-6 flex flex-col gap-3 drawer-divider-top">
+      <a href="https://www.instagram.com/maru.visuals/" target="_blank" class="flex items-center gap-3 text-white hover:text-white/70 transition-colors">
+        <svg viewBox="0 0 24 24" class="w-4 h-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12.003 5.848A6.142 6.142 0 005.85 12a6.142 6.142 0 006.152 6.152A6.142 6.142 0 0018.155 12a6.142 6.142 0 00-6.152-6.152zm0 10.152c-2.2 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.8 4-4 4zM19.84 5.596c0 .798-.642 1.435-1.435 1.435a1.435 1.435 0 111.435-1.435zm4.075 1.457c-.091-1.922-.53-3.625-1.939-5.028C20.575.622 18.872.183 16.95.087c-1.981-.112-7.919-.112-9.9 0-1.917.091-3.62.53-5.027 1.933C.614 3.423.18 5.125.084 7.047c-.112 1.981-.112 7.92 0 9.9.091 1.922.53 3.625 1.939 5.028 1.408 1.403 3.105 1.842 5.027 1.938 1.981.112 7.919.112 9.9 0 1.922-.091 3.625-.53 5.027-1.938 1.403-1.403 1.842-3.106 1.939-5.028.112-1.98.112-7.913 0-9.894zm-2.56 12.02a4.049 4.049 0 01-2.28 2.28c-1.58.627-5.328.483-7.073.483-1.746 0-5.499.139-7.073-.482a4.05 4.05 0 01-2.281-2.281c-.626-1.58-.482-5.328-.482-7.073s-.14-5.499.482-7.073a4.05 4.05 0 012.28-2.28c1.58-.627 5.328-.483 7.074-.483 1.745 0 5.498-.139 7.073.482a4.05 4.05 0 012.28 2.281c.627 1.58.482 5.328.482 7.073s.145 5.499-.482 7.073z"></path></svg>
         <span class="text-sm">maru.visuals</span>
       </a>
-      <a href="mailto:contact@maruvisuals.com" class="text-white hover:text-white/70 text-sm">
+      <a href="mailto:contact@maruvisuals.com" class="text-white hover:text-white/70 transition-colors text-sm">
         contact&#64;maruvisuals.com
       </a>
     </div>
-
-    <!-- Close button -->
-    <button
-      class="absolute top-4 right-4 text-2xl text-white"
-      (click)="closeMenu()"
-    >
-      ✕
-    </button>
   </div>
 </nav>

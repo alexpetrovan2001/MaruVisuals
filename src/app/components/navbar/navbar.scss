@@ -5,7 +5,7 @@
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: -2px; /* a little space below the text */
+  bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
@@ -16,5 +16,77 @@
 
 .nav-link:hover::after,
 .nav-link.active::after {
-  width: 30%; /* underline is half the text width */
+  width: 30%;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 60;
+
+  @media (min-width: 1024px) {
+    display: none !important;
+  }
+
+  span {
+    display: block;
+    height: 1.5px;
+    width: 100%;
+    background: currentColor;
+    border-radius: 2px;
+    transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+  }
+
+  /* Second bar slightly shorter for visual elegance */
+  span:nth-child(2) {
+    width: 75%;
+    align-self: flex-end;
+  }
+
+  &.open {
+    span:nth-child(1) {
+      transform: translateY(9.25px) rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+      width: 0;
+    }
+    span:nth-child(3) {
+      transform: translateY(-9.25px) rotate(-45deg);
+    }
+  }
+}
+
+/* Drawer dividers */
+.drawer-divider-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  .dark & { border-bottom-color: rgba(255, 255, 255, 0.12); }
+}
+
+.drawer-divider-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+  .dark & { border-top-color: rgba(255, 255, 255, 0.12); }
+}
+
+/* Drawer nav links */
+.drawer-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  @apply text-text py-3 transition-colors duration-200 hover:text-accent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  .dark & {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+  }
 }

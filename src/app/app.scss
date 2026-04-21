@@ -14,4 +14,8 @@
     position: relative;
     z-index: 1;
   }
+
+  > app-navbar {
+    z-index: 100;
+  }
 }
