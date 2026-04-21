@@ -13,7 +13,7 @@
   transform: scale(1.05);
   }
 
-  .active .bg-opacity-70 {
+  .active > div {
     opacity: 1 !important;
   }
 
@@ -61,9 +61,12 @@
 }
 
 .card-container {
+  @media (min-width: 640px) and (max-width: 1023px) {
+    transform: scaleX(0.92);
+  }
+
   @media (min-width: 1024px) {
     transform: scaleX(0.85);
-    transform-origin: top center;
   }
 
   @media (min-width: 1280px) {
