@@ -1,10 +1,10 @@
 <div class="flex flex-col items-center justify-center w-full min-h-screen py-12 px-12 animate-fadeIn">
 
   <!-- Client Logo -->
-  @if(client){
+  @if(client?.logo){
     <img
-      [src]="client.logo"
-      [alt]="client.name + ' logo'"
+      [src]="client!.logo"
+      [alt]="client!.name + ' logo'"
       loading="lazy"
       class="w-36 mb-12 filter invert dark:invert-0"
     />
@@ -47,6 +47,46 @@
         type="image/webp"
       />
       <!-- Fallback image -->
+      <img
+        [src]="client?.sampleImage"
+        [alt]="client?.name + ' collage'"
+        loading="lazy"
+        class="object-cover"
+      />
+    </picture>
+  }
+  @if(client?.landscapeImage3){
+    <picture class="pt-1">
+      <source
+        media="(min-aspect-ratio: 1/1)"
+        [srcset]="client?.landscapeImage3"
+        type="image/webp"
+      />
+      <source
+        media="(max-aspect-ratio: 1/1)"
+        [srcset]="client?.portraitImage3 || client?.sampleImage"
+        type="image/webp"
+      />
+      <img
+        [src]="client?.sampleImage"
+        [alt]="client?.name + ' collage'"
+        loading="lazy"
+        class="object-cover"
+      />
+    </picture>
+  }
+  @if(client?.landscapeImage4){
+    <picture class="pt-1">
+      <source
+        media="(min-aspect-ratio: 1/1)"
+        [srcset]="client?.landscapeImage4"
+        type="image/webp"
+      />
+      <source
+        media="(max-aspect-ratio: 1/1)"
+        [srcset]="client?.portraitImage4 || client?.sampleImage"
+        type="image/webp"
+      />
       <img
         [src]="client?.sampleImage"
         [alt]="client?.name + ' collage'"
